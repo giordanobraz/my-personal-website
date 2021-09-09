@@ -25,6 +25,30 @@
   }
 }
 
+.pageNotFound {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    color: red;
+  }
+}
+
+.internalServerError {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    color: red;
+  }
+}
+
 @media screen {
   @media (max-width: 767px) {
     .container {
