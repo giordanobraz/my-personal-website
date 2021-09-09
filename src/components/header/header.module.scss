@@ -57,6 +57,10 @@
 
         a {
           height: auto;
+
+          & + a {
+            margin-left: 1rem;
+          }
         }
       }
     }
