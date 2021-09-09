@@ -14,11 +14,18 @@ export default function Header() {
                     <Link href="/">
                         Home
                     </Link>
+                    <Link href="/portfolio">
+                        Portfólio
+                    </Link>
                     <Link href="https://www.linkedin.com/in/giordano-bruno-silva-323345b4/">
-                        LinkedIn
+                        <a target="_blank">
+                            LinkedIn
+                        </a>
                     </Link>
                     <Link href="https://github.com/giordanobraz">
-                        Github
+                        <a target='_blank'>
+                            Github
+                        </a>
                     </Link>
                 </nav>
             </div>
