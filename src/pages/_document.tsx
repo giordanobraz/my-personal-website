@@ -1,4 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+// eslint-disable-next-line @next/next/no-document-import-in-page
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 import React from "react";
 
 class MyDocument extends Document {
