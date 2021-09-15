@@ -31,7 +31,7 @@ export default function Card() {
       image: imgApi,
       title: "API REST com Node (NestJS)",
       info: "Projeto portfólio back-end, desenvolvido com o framework NestJS, simulando autenticação, JWT Tokens, e CRUD. Integrado com MongoDB.",
-      link: "https://dashboard-react.pages.dev/",
+      link: "https://github.com/giordanobraz/nestjs-api",
     },
   ];
 
