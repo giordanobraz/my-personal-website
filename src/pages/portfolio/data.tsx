@@ -50,7 +50,7 @@ export default function Card() {
           <div className={styles.card_content}>
             <div className={styles.card_title}>{project.title}</div>
             <p className={styles.card_text}>{project.info}</p>
-            <a className={styles.card_button} href="" target="_blank">
+            <a className={styles.card_button} href={project.link} target="_blank" rel="noreferrer" >
               Visualizar
             </a>
           </div>
