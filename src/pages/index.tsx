@@ -1,8 +1,8 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import laptop from '../../public/www.png';
-import styles from './home.module.scss';
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import laptop from "../../public/www.png";
+import styles from "./home.module.scss";
 
 const Home: NextPage = () => {
   return (
@@ -11,15 +11,19 @@ const Home: NextPage = () => {
         <title>Giordano Bruno</title>
       </Head>
 
-      <main className={styles.container}>
+      <main id="container" className={styles.home_page}>
         <section className={styles.hero}>
-          <h1>Olá! Eu sou o Giordano ✌️</h1>
-          <p>Desenvolvedor Fullstack Javascript.</p>
+          <div className={styles.greetings}>
+            <h1>Olá! Eu sou o Giordano ✌️</h1>
+            <p>Desenvolvedor Fullstack Javascript.</p>
+          </div>
+          <div className={styles.image}>
+            <Image src={laptop} alt="laptop" />
+          </div>
         </section>
-        <Image src={laptop} alt="laptop" />
       </main>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
