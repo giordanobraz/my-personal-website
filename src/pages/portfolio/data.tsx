@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import { Fragment } from "react";
 import imgAppPass from "../../../public/images/app_pass_saude.png";
@@ -43,6 +44,9 @@ export default function Card() {
 
   return (
     <Fragment>
+      <Head>
+        <title>Giordano Bruno - Portfólio</title>
+      </Head>
       {projects.map((project, index) => (
         <div key={index} className={styles.card}>
           <Image

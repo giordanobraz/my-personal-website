@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Giordano Bruno</title>
+        <title>Giordano Bruno - Desenvolvedor Fullstack</title>
       </Head>
 
       <main id="container" className={styles.home_page}>
