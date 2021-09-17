@@ -3,12 +3,24 @@ import { Fragment } from "react";
 import imgAppPass from "../../../public/images/app_pass_saude.png";
 import imgPass from "../../../public/images/cartaopasscombr.png";
 import imgDashboard from "../../../public/images/dashboard_react.png";
+import imgIgnews from "../../../public/images/ignews.png";
 import imgApi from "../../../public/images/nest_api.png";
 import styles from "./index.module.scss";
 
-
 export default function Card() {
   const projects = [
+    {
+      image: imgIgnews,
+      title: "Ignews - Next.js",
+      info: "Projeto incrível desenvolvido durante a trilha de Reactjs no Ignite, da Rocketseat. Build de produção!",
+      link: "https://ignews-nu-silk.vercel.app/",
+    },
+    {
+      image: imgDashboard,
+      title: "Dashboard React",
+      info: "Projeto portfólio front-end, desenvolvido com Reactjs, HTML5 e Sass.",
+      link: "https://dashboard-react.pages.dev/",
+    },
     {
       image: imgAppPass,
       title: "Pass Saúde - Aplicativo Android",
@@ -18,14 +30,8 @@ export default function Card() {
     {
       image: imgPass,
       title: "Pass Saúde - Sistema PWA",
-      info: "Sistema de gerenciamento do cartão Pass Saúde, desenvolvido com Ionic Framework/Angular.",
+      info: "Sistema de gerenciamento do cartão Pass Saúde. Front-end desenvolvido com Ionic Framework/Angular, e o back-end com Node/NestJS e MongoDB.",
       link: "https://cartaopass.com.br/",
-    },
-    {
-      image: imgDashboard,
-      title: "Dashboard React",
-      info: "Projeto portfólio front-end, desenvolvido com Reactjs, HTML5 e Sass.",
-      link: "https://dashboard-react.pages.dev/",
     },
     {
       image: imgApi,
@@ -50,7 +56,12 @@ export default function Card() {
           <div className={styles.card_content}>
             <div className={styles.card_title}>{project.title}</div>
             <p className={styles.card_text}>{project.info}</p>
-            <a className={styles.card_button} href={project.link} target="_blank" rel="noreferrer" >
+            <a
+              className={styles.card_button}
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+            >
               Visualizar
             </a>
           </div>
