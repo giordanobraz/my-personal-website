@@ -1,7 +1,6 @@
 // eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
-import * as gtag from "../lib/gtag";
 
 class MyDocument extends Document {
   render() {
@@ -32,21 +31,7 @@ class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
             rel="stylesheet"
-          />
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${gtag.G_TAG_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${gtag.G_TAG_ID}');
-                `,
-            }}
-          />
+          />          
         </Head>
         <body>
           <Main />

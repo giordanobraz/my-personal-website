@@ -1,26 +1,25 @@
 import type { AppProps } from "next/app";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import Script from "next/script";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import * as gtag from "../lib/gtag";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      gtag.pageview(url);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
-
   return (
     <>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-NNQMNNCNE7`}
+      />
+      <Script id="gtag" strategy="lazyOnload">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-NNQMNNCNE7');
+        `}
+        </Script>
       <Header />
       <Component {...pageProps} />
       <Footer />
