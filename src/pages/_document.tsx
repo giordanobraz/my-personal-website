@@ -23,6 +23,14 @@ class MyDocument extends Document {
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="language" content="Portuguese" />
           <meta name="author" content="Giordano Bruno" />
+          <meta
+            property="og:image"
+            content="https://avatars.githubusercontent.com/u/14043484?v=4?s=400"
+          />
+          <meta
+            property="og:image:alt"
+            content="Fullstack Javascript Developer"
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
@@ -31,7 +39,7 @@ class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
             rel="stylesheet"
-          />          
+          />
         </Head>
         <body>
           <Main />
