@@ -20,30 +20,26 @@ const Home: NextPage = () => {
             <Image
               src="https://avatars.githubusercontent.com/u/14043484?v=4?s=400"
               alt="foto pessoal"
-              height="460"
-              width="460"
+              layout='fill'
             />
           </div>
 
           <h1>Giordano Bruno</h1>
-          <a href="https://github.com/giordanobraz" target="_blank">
+          <a href="https://instagram.com/maykbrito">
             <Image src={githubImg} alt="github" />
             giordanobraz
           </a>
 
-          <p>Fullstack Javascript Developer based in Brazil.</p>
+          <p>A dreamer.</p>
 
           <ul>
             <li>
-              <a
-                href="https://www.youtube.com/channel/UCe79dc5tl1MDLKSn7HNoegA"
-                target="_blank"
-              >
+              <a href="https://youtube.com/maykbrito">
                 <Image src={youtubeImg} alt="youtube" />
               </a>
             </li>
             <li>
-              <a href="https://instagram.com/giobraz.exe" target="_blank">
+              <a href="https://facebook.com/maykbrito">
                 <Image src={instagramImg} alt="instagram" />
               </a>
             </li>

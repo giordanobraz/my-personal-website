@@ -26,7 +26,7 @@ const Home: NextPage = () => {
           </div>
 
           <h1>Giordano Bruno</h1>
-          <a href="https://github.com/giordanobraz" target="_blank">
+          <a href="https://instagram.com/giordanobraz">
             <Image src={githubImg} alt="github" />
             giordanobraz
           </a>

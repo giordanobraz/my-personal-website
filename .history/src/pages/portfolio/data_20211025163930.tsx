@@ -14,13 +14,13 @@ export default function Card() {
       image: imgIgnews,
       title: "Ignews - Next.js",
       info: "Projeto incrível desenvolvido durante a trilha de Reactjs no Ignite, da Rocketseat. Build de produção!",
-      link: "https://ignews.giordano.dev.br/",
+      link: "https://ignews-nu-silk.vercel.app/",
     },
     {
       image: imgDashboard,
       title: "Dashboard React",
       info: "Projeto portfólio front-end, desenvolvido com Reactjs, HTML5 e Sass.",
-      link: "https://dashboard.giordano.dev.br/",
+      link: "https://dashboard-react.pages.dev/",
     },
     {
       image: imgAppPass,

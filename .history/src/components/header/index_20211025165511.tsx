@@ -15,7 +15,7 @@ export default function Header() {
                         Home
                     </Link>
                     <Link href="/portfolio">
-                        Projetos
+                        Portfólio
                     </Link>
                     <Link href="https://www.linkedin.com/in/giordano-bruno-silva/">
                         <a target="_blank">

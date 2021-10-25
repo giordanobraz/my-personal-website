@@ -6,7 +6,6 @@
         background: url("../../public/background.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 15px;
         margin: 0 auto;
         text-align: center;
         color: var(--grey);
@@ -14,7 +13,7 @@
         height: 700px;
         .avatar {
             width: 10rem;
-            margin: 6rem auto 0;
+            margin: 9rem auto 0;
             position: relative;
             img {
                 width: 10rem;

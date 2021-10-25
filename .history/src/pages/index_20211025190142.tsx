@@ -26,7 +26,7 @@ const Home: NextPage = () => {
           </div>
 
           <h1>Giordano Bruno</h1>
-          <a href="https://github.com/giordanobraz" target="_blank">
+          <a href="https://instagram.com/giordanobraz">
             <Image src={githubImg} alt="github" />
             giordanobraz
           </a>
@@ -35,15 +35,12 @@ const Home: NextPage = () => {
 
           <ul>
             <li>
-              <a
-                href="https://www.youtube.com/channel/UCe79dc5tl1MDLKSn7HNoegA"
-                target="_blank"
-              >
+              <a href="https://youtube.com/giobraztv">
                 <Image src={youtubeImg} alt="youtube" />
               </a>
             </li>
             <li>
-              <a href="https://instagram.com/giobraz.exe" target="_blank">
+              <a href="https://facebook.com/giobraz.exe">
                 <Image src={instagramImg} alt="instagram" />
               </a>
             </li>

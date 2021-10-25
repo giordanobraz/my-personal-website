@@ -4,8 +4,6 @@ import Image from "next/image";
 import styles from "./home.module.scss";
 
 import githubImg from "../../public/social_icons/github.svg";
-import instagramImg from "../../public/social_icons/instagram.svg";
-import youtubeImg from "../../public/social_icons/youtube.svg";
 
 const Home: NextPage = () => {
   return (
@@ -17,34 +15,41 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div className={styles.container}>
           <div className={styles.avatar}>
-            <Image
-              src="https://avatars.githubusercontent.com/u/14043484?v=4?s=400"
-              alt="foto pessoal"
-              height="460"
-              width="460"
+            <img
+              src="https://lorempixel.com/185/185/people/"
+              alt="Foto pessoal"
             />
           </div>
 
           <h1>Giordano Bruno</h1>
-          <a href="https://github.com/giordanobraz" target="_blank">
+          <a href="https://instagram.com/maykbrito">
             <Image src={githubImg} alt="github" />
             giordanobraz
           </a>
 
-          <p>Fullstack Javascript Developer based in Brazil.</p>
+          <p>
+            A dreamer.
+          </p>
 
           <ul>
             <li>
-              <a
-                href="https://www.youtube.com/channel/UCe79dc5tl1MDLKSn7HNoegA"
-                target="_blank"
-              >
-                <Image src={youtubeImg} alt="youtube" />
+              <a href="https://youtube.com/maykbrito">
+                <img src="images/youtube.svg" alt="ícone youtube" />
               </a>
             </li>
             <li>
-              <a href="https://instagram.com/giobraz.exe" target="_blank">
-                <Image src={instagramImg} alt="instagram" />
+              <a href="https://facebook.com/maykbrito">
+                <img src="images/facebook.svg" alt="ícone facebook" />
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/maykbrito">
+                <img src="images/instagram.svg" alt="ícone instagram" />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/maykbrito">
+                <img src="images/twitter.svg" alt="ícone twitter" />
               </a>
             </li>
           </ul>

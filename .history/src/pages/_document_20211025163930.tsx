@@ -13,7 +13,7 @@ class MyDocument extends Document {
           />
           <meta
             name="description"
-            content="Seja bem-vindo ao meu site! Aqui você pode ver projetos que já desenvolvi, e links para minhas redes sociais."
+            content="Seja bem-vindo ao meu site! Aqui voc ê pode ver projetos que já desenvolvi, e links para minhas mídias sociais."
           />
           <meta
             name="keywords"
@@ -23,11 +23,6 @@ class MyDocument extends Document {
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="language" content="Portuguese" />
           <meta name="author" content="Giordano Bruno" />
-
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://giordano.dev.br" />
-          <meta property="og:title" content="Giordano Bruno - Desenvolvedor Fullstack" />
-          <meta property="og:description" content="Seja bem-vindo ao meu site! Aqui você pode ver projetos que já desenvolvi, e links para minhas redes sociais." />
           <meta
             property="og:image"
             content="https://avatars.githubusercontent.com/u/14043484?v=4?s=400"
@@ -36,7 +31,6 @@ class MyDocument extends Document {
             property="og:image:alt"
             content="Fullstack Javascript Developer"
           />
-
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"

@@ -2,19 +2,19 @@
     display: flex;
     align-items: center;
     height: calc(100vh - 10rem);
+    width: 375px;
+    height: 700px;
     .container {
         background: url("../../public/background.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 15px;
+        max-width: 250px;
         margin: 0 auto;
         text-align: center;
         color: var(--grey);
-        width: 450px;
-        height: 700px;
         .avatar {
             width: 10rem;
-            margin: 6rem auto 0;
+            margin: 11.5rem auto 0;
             position: relative;
             img {
                 width: 10rem;
