@@ -27,7 +27,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         async
         src={`//cdn.iframe.ly/embed.js?api_key=${process.env.NEXT_PUBLIC_IFRAMELY}`}
       ></Script>
-      <Script id="iframely" type="text/javascript">{`document.querySelectorAll( 'oembed[url]' ).forEach( element => {
+      <Script
+        id="iframely"
+        type="text/javascript"
+      >{`document.querySelectorAll( 'oembed[url]' ).forEach( element => {
           iframely.load( element, element.attributes.url.value );
       } );`}</Script>
       <Script src={"/prism/prism.js"}></Script>
