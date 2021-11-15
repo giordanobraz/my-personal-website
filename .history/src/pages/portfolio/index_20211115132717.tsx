@@ -6,7 +6,7 @@ import PortfolioItems from "../../components/portfolio";
 
 export const SeoDetails = {
   title: "Portfólio | Giordano Bruno - Desenvolvedor Fullstack",
-  description: "Alguns dos projetos que desenvolvi. Sempre atualizo :)",
+  description: "Meu portfólio.",
   author: "Giordano Bruno Borges Braz da Silva",
   openGraph: {
     type: "website",
@@ -27,11 +27,11 @@ export default function PortfolioPage() {
           url: "https://giordano.dev.br/portfolio",
           site_name: "Giordano Bruno - Desenvolvedor Fullstack",
           title: "Portfólio | Giordano Bruno - Desenvolvedor Fullstack",
-          images: [
-            {
-              url: "https://avatars.githubusercontent.com/u/14043484?v=4?s=400",
-            },
-          ],
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image",
         }}
       />
       <Flex

@@ -59,6 +59,11 @@ export default function Post({ post }: PostProps) {
             },
           ],
         }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image",
+        }}
       />
 
       <Flex

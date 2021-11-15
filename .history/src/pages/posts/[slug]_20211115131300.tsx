@@ -48,6 +48,7 @@ export default function Post({ post }: PostProps) {
         description={post.description}
         openGraph={{
           type: "website",
+          locale: "pt_BR",
           url: "https://giordano.dev.br",
           title: `${post.title}`,
           description: `${post.description}`,
@@ -59,6 +60,7 @@ export default function Post({ post }: PostProps) {
             },
           ],
         }}
+        twitter={{}}
       />
 
       <Flex

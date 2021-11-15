@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Stack } from "@chakra-ui/layout";
 import { Img } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { NextSeo } from "next-seo";
+import { Seo } from "../../components/seo";
 import { getAllPosts, getPostBySlug } from "../../services/strapi";
 
 interface Category {
@@ -12,9 +12,6 @@ interface Category {
 interface Author {
   name: string;
   email: string;
-  picture: {
-    url: string;
-  };
 }
 
 interface PostProps {
@@ -43,24 +40,7 @@ export default function Post({ post }: PostProps) {
 
   return (
     <>
-      <NextSeo
-        title={post.title}
-        description={post.description}
-        openGraph={{
-          type: "website",
-          url: "https://giordano.dev.br",
-          title: `${post.title}`,
-          description: `${post.description}`,
-          site_name: "Giordano Bruno - Desenvolvedor Fullstack",
-          images: [
-            {
-              url: `${post.image.url}`,
-              alt: `${post.title}`,
-            },
-          ],
-        }}
-      />
-
+      <Seo seo={post} />
       <Flex
         flexDir="column"
         maxWidth="1120px"

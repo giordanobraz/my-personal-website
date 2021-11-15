@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Stack } from "@chakra-ui/layout";
 import { Img } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { NextSeo } from "next-seo";
+import { ArticleJsonLd } from "next-seo";
 import { getAllPosts, getPostBySlug } from "../../services/strapi";
 
 interface Category {
@@ -14,7 +14,7 @@ interface Author {
   email: string;
   picture: {
     url: string;
-  };
+  }
 }
 
 interface PostProps {
@@ -43,22 +43,34 @@ export default function Post({ post }: PostProps) {
 
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title={post.title}
         description={post.description}
         openGraph={{
           type: "website",
+          locale: "pt_BR",
           url: "https://giordano.dev.br",
           title: `${post.title}`,
           description: `${post.description}`,
           site_name: "Giordano Bruno - Desenvolvedor Fullstack",
           images: [
             {
-              url: `${post.image.url}`,
+              url: `${post.image}`,
               alt: `${post.title}`,
             },
           ],
         }}
+        twitter={{}}
+      /> */}
+      <ArticleJsonLd
+      url={`https://giordano.dev.br/posts/${post.slug}`}
+      title={post.title}
+      datePublished={post.published_at}
+      authorName={[`${post.author}`]}
+      description={post.description}
+      publisherLogo=""
+      publisherName=""
+
       />
 
       <Flex

@@ -33,6 +33,11 @@ export default function PortfolioPage() {
             },
           ],
         }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image",
+        }}
       />
       <Flex
         maxWidth="1366px"
