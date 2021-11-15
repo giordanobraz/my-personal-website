@@ -10,7 +10,7 @@ import { theme } from "../styles/theme";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Script id="iframely">{`document.querySelectorAll( 'oembed[url]' ).forEach( element => {
+      <Script>{`document.querySelectorAll( 'oembed[url]' ).forEach( element => {
         iframely.load( element, element.attributes.url.value );
     } );`}</Script>
       <Script

@@ -10,8 +10,17 @@ import { theme } from "../styles/theme";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Script id="iframely">{`document.querySelectorAll( 'oembed[url]' ).forEach( element => {
-        iframely.load( element, element.attributes.url.value );
+      <Script
+        src={`//cdn.iframe.ly/embed.js?api_key=${process.env.NEXT_PUBLIC_IFRAMELY}`}
+      ></Script>
+      <Script>{`document.querySelectorAll( 'div[data-oembed-url]' ).forEach( element => {
+        // Discard the static media preview from the database (empty the <div data-oembed-url="...">).
+        while ( element.firstChild ) {
+            element.removeChild( element.firstChild );
+        }
+
+        // Generate the media preview using Iframely.
+        iframely.load( element, element.dataset.oembedUrl ) ;
     } );`}</Script>
       <Script
         strategy="lazyOnload"

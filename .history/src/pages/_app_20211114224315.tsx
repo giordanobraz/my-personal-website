@@ -10,9 +10,6 @@ import { theme } from "../styles/theme";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Script id="iframely">{`document.querySelectorAll( 'oembed[url]' ).forEach( element => {
-        iframely.load( element, element.attributes.url.value );
-    } );`}</Script>
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=G-NNQMNNCNE7`}
@@ -26,6 +23,22 @@ function MyApp({ Component, pageProps }: AppProps) {
         gtag('config', 'G-NNQMNNCNE7');
         `}
       </Script>
+      <Script
+        src={`//cdn.iframe.ly/embed.js?api_key=${process.env.NEXT_PUBLIC_IFRAMELY}`}
+      ></Script>
+      <Script>{`function loadIframelyEmbedJs() {       
+        if (document.querySelectorAll("[data-iframely-url]").length === 0
+            && document.querySelectorAll("iframe[src*='iframe.ly']").length === 0) return;
+        var iframely = window.iframely = window.iframely || {};
+        if (iframely.load) {
+            iframely.load();
+        } else {
+            var ifs = document.createElement('script'); ifs.type = 'text/javascript'; ifs.async = true;
+            ifs.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//cdn.iframe.ly/embed.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ifs, s);
+        }
+    }  
+    loadIframelyEmbedJs();`}</Script>
       <Script src={"/prism/prism.js"}></Script>
       <Header />
       <Component {...pageProps} />
