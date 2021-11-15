@@ -1,5 +1,6 @@
 // eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 import React from "react";
 
 class MyDocument extends Document {
@@ -21,7 +22,10 @@ class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
             rel="stylesheet"
-          />          
+          />
+          <Script
+            src={`//cdn.iframe.ly/embed.js?api_key=${process.env.NEXT_PUBLIC_IFRAMELY}`}
+          ></Script>
         </Head>
         <body>
           <Main />
