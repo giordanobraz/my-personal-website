@@ -1,7 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import Script from "next/script";
-import '../../public/prism/prism.css';
 import Footer from "../components/footer";
 import Header from "../components/header";
 import "../styles/globals.scss";
@@ -23,11 +22,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         gtag('config', 'G-NNQMNNCNE7');
         `}
       </Script>
-      <Script src={`//cdn.iframe.ly/embed.js?api_key=794bb02f714ec48a302d39`}></Script>
-      <Script id="iframely">{`document.querySelectorAll( 'oembed[url]' ).forEach( element => {
+      <Script>{`document.querySelectorAll( 'oembed[url]' ).forEach( element => {
           iframely.load( element, element.attributes.url.value );
       } );`}</Script>
-      <Script src={"/prism/prism.js"}></Script>      
+      <Script id="prism" src={"/prism/prism.js"}></Script>      
       <Header />
       <Component {...pageProps} />
       <Footer />

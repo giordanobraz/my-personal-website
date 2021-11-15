@@ -22,6 +22,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
             rel="stylesheet"
           />
+          <link href="/prism/prism.css" rel="stylesheet" />          
         </Head>
         <body>
           <Main />
