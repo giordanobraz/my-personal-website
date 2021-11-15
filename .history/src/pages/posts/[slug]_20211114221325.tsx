@@ -40,7 +40,7 @@ export default function Post({ post }: PostProps) {
 
   return (
     <>
-      <Seo seo={post} />
+      <Seo seo={post}/>
       <Flex
         flexDir="column"
         maxWidth="1120px"
@@ -86,7 +86,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slug: post.slug,
       },
     })),
-    fallback: "blocking",
+    fallback: 'blocking',
   };
 };
 

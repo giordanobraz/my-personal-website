@@ -23,12 +23,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         gtag('config', 'G-NNQMNNCNE7');
         `}
       </Script>
-      <Script
-            id="iframely"
-            strategy="lazyOnload"
-          >{`document.querySelectorAll( 'oembed[url]' ).forEach( element => {
-        iframely.load( element, element.attributes.url.value );
-    } );`}</Script>
       <Script src={"/prism/prism.js"}></Script>      
       <Header />
       <Component {...pageProps} />

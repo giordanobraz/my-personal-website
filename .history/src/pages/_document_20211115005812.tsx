@@ -22,7 +22,6 @@ class MyDocument extends Document {
             rel="stylesheet"
           />          
           <script
-          async
             src={`//cdn.iframe.ly/embed.js?api_key=${process.env.NEXT_PUBLIC_IFRAMELY}`}
           ></script>
         </Head>

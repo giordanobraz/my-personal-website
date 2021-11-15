@@ -21,10 +21,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
             rel="stylesheet"
           />          
-          <script
-          async
-            src={`//cdn.iframe.ly/embed.js?api_key=${process.env.NEXT_PUBLIC_IFRAMELY}`}
-          ></script>
         </Head>
         <body>
           <Main />

@@ -9,7 +9,7 @@ import { theme } from "../styles/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme}>      
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=G-NNQMNNCNE7`}
@@ -23,13 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         gtag('config', 'G-NNQMNNCNE7');
         `}
       </Script>
-      <Script
-            id="iframely"
-            strategy="lazyOnload"
-          >{`document.querySelectorAll( 'oembed[url]' ).forEach( element => {
-        iframely.load( element, element.attributes.url.value );
-    } );`}</Script>
-      <Script src={"/prism/prism.js"}></Script>      
+      <Script src={"/prism/prism.js"}></Script>
       <Header />
       <Component {...pageProps} />
       <Footer />

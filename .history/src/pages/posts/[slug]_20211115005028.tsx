@@ -1,6 +1,8 @@
 import { Box, Flex, Heading, Stack } from "@chakra-ui/layout";
 import { Img } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
+import Script from "next/script";
 import { Seo } from "../../components/seo";
 import { getAllPosts, getPostBySlug } from "../../services/strapi";
 
@@ -40,6 +42,15 @@ export default function Post({ post }: PostProps) {
 
   return (
     <>
+      <Head>
+        <Script>{`document.querySelectorAll( 'oembed[url]' ).forEach( element => {
+        iframely.load( element, element.attributes.url.value );
+    } );`}</Script>
+        <Script
+          async
+          src={`//cdn.iframe.ly/embed.js?api_key=${process.env.NEXT_PUBLIC_IFRAMELY}`}
+        ></Script>
+      </Head>
       <Seo seo={post} />
       <Flex
         flexDir="column"
