@@ -1,23 +1,32 @@
 {
-  "name": "react-next-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "sass": "^1.39.0"
-  },
-  "devDependencies": {
-    "@types/react": "17.0.19",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
-    "typescript": "4.4.2"
-  }
+    "name": "giordano-dev-br",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@chakra-ui/icons": "^1.0.17",
+        "@chakra-ui/react": "^1.6.12",
+        "@emotion/react": "^11",
+        "@emotion/styled": "^11",
+        "@fontsource/fjalla-one": "^4.5.0",
+        "@fontsource/roboto": "^4.5.1",
+        "axios": "^0.24.0",
+        "framer-motion": "^4",
+        "next": "11.1.2",
+        "next-seo": "^4.28.1",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "sass": "^1.39.0"
+    },
+    "devDependencies": {
+        "@types/react": "17.0.19",
+        "eslint": "7.32.0",
+        "eslint-config-next": "11.1.2",
+        "typescript": "4.4.2"
+    }
 }

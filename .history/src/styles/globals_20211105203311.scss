@@ -1,0 +1,55 @@
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.article {
+    font-family: "Roboto", sans-serif;
+    a {
+        text-decoration: underline !important;
+        color: #179af9 !important;
+    }
+    p,
+    figure {
+        margin: 2rem 0;
+    }
+    code {
+        background: grey;
+        color: white;
+        font-size: 16px;
+        padding: 0;
+        padding: 10px;
+        &:before {
+            display: block;
+            width: calc(100%);
+            margin-left: -3px;
+            margin-top: -3px;
+            padding: 3px;
+            text-transform: uppercase;
+            content: attr(data-lang);
+            background: blue;
+        }
+    }
+}
