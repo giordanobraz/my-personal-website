@@ -5,7 +5,7 @@ export const strapi_api = axios.create({
 });
 
 export const getAllPosts = async () => {
-  const posts = await strapi_api.get("/articles?_sort=published_at:DESC").then((posts) => posts);
+  const posts = await strapi_api.get("/articles?_sort=published_at:ASC").then((posts) => posts);
   return posts;
 };
 
