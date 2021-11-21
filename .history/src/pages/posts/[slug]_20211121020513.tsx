@@ -48,7 +48,7 @@ export default function Post({ post }: PostProps) {
         description={post.description}
         openGraph={{
           type: "website",
-          url: `"https://giordano.dev.br/posts/${post.slug}"`,
+          url: "https://giordano.dev.br",
           title: `${post.title}`,
           description: `${post.description}`,
           site_name: "Giordano Bruno - Desenvolvedor Fullstack",
