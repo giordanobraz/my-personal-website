@@ -39,7 +39,7 @@ const Home = ({ posts }: PostProps) => {
       <DefaultSeo {...SEO} />
       <Flex
         flexDir={["column", "column", "column", "row"]}
-        maxWidth="1120px"
+        maxWidth="1366px"
         margin="0 auto"
         paddingX="2em"
         style={{ gap: "20px" }}
