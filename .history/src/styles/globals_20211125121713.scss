@@ -34,8 +34,18 @@
     p {
         margin: 1.5rem 0;
     }
+    figure {
+        margin: 2rem auto;
+        text-align: center;
+        img {
+            margin: 0 auto;
+        }
+        figcaption {
+            padding: 0.6rem 0;
+            font-size: 1rem;
+        }
+    }
     h2 {
-        margin-top: 2rem;
         font-family: var(--chakra-fonts-heading);
         font-weight: var(--chakra-fontWeigths-bold);
         font-size: var(--chakra-fontSizes-3xl);

@@ -4,6 +4,7 @@ import Script from "next/script";
 import "../../public/prism/prism.css";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import "../styles/content-styles.css";
 import "../styles/globals.scss";
 import { theme } from "../styles/theme";
 

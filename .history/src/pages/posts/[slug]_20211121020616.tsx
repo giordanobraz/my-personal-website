@@ -86,7 +86,7 @@ export default function Post({ post }: PostProps) {
           </Stack>
           <Box fontSize="xl" color="grey.300" fontFamily="Roboto">
             <div
-              className="ck-content article"
+              className="article"
               dangerouslySetInnerHTML={createMarkup(post.content)}
             />
           </Box>
