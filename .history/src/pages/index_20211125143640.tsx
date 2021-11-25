@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Heading, Stack } from "@chakra-ui/react";
+import { Box, Divider, Flex, Heading } from "@chakra-ui/react";
 import type { GetStaticProps } from "next";
 import { DefaultSeo } from "next-seo";
 import HeroSection from "../components/hero";
@@ -60,12 +60,12 @@ const Home = ({ posts }: PostProps) => {
               published_at={hero_post.published_at}
             />
           )}
-          <Stack spacing={2}>
+          <Box>
             <Heading textTransform={"uppercase"}>
               Postagens Mais Antigas
             </Heading>
             <Divider />
-          </Stack>
+          </Box>
           {previous_posts.length > 0 && (
             <PreviousContent previous_posts={previous_posts} />
           )}

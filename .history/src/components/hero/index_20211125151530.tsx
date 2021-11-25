@@ -19,14 +19,14 @@ export default function HeroSection({
   published_at,
 }: HeroPost) {
   return (
-    <Link href={`/posts/${slug}`} _hover={{ textDecor: "none" }}>
+    <Link href={`/posts/${slug}`} _hover={{ textDecor: "none", border: "1px solid #FFF" }}>
       <Flex
         flexDir={["column", "column", "column", "row"]}
         w="100%"
         style={{ gap: "16px" }}
         bgColor="#262626"
-        padding="1rem"
-        rounded={"md"}
+        padding="10px"
+        rounded={"md"}        
       >
         <Image
           src={`${image?.url}`}

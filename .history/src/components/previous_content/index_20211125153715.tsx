@@ -38,7 +38,7 @@ export default function PreviousContent({ previous_posts }: PostProps) {
           key={post.slug}
         >
           <Box
-            maxH={"210px"}
+            h={"210px"}
             bg={"gray.100"}
             mt={-6}
             mx={-6}
@@ -49,6 +49,7 @@ export default function PreviousContent({ previous_posts }: PostProps) {
               src={`${post.image?.url}`}
               alt={`${post.title}`}
               loading={"lazy"}
+              objectFit={"contain"}
             />
           </Box>
           <Stack cursor="default" spacing={5}>

@@ -19,29 +19,24 @@ export default function HeroSection({
   published_at,
 }: HeroPost) {
   return (
-    <Link href={`/posts/${slug}`} _hover={{ textDecor: "none" }}>
-      <Flex
-        flexDir={["column", "column", "column", "row"]}
-        w="100%"
-        style={{ gap: "16px" }}
-        bgColor="#262626"
-        padding="1rem"
-        rounded={"md"}
-      >
-        <Image
-          src={`${image?.url}`}
-          alt={title}
-          maxH={250}
-          loading="eager"
-          objectFit="cover"
-          title={title}
-        />
-        <Box
-          display="flex"
-          flexDir="column"
-          marginX={1}
-          style={{ gap: "22px" }}
-        >
+    <Flex
+      flexDir={["column", "column", "column", "row"]}
+      w="100%"
+      style={{ gap: "16px" }}
+      bgColor="#262626"
+      padding="10px"      
+      rounded={"md"}
+    >
+      <Image
+        src={`${image?.url}`}
+        alt={title}
+        maxH={250}
+        loading="eager"
+        objectFit="cover"
+        title={title}
+      />
+      <Box display="flex" flexDir="column" marginX={1} style={{ gap: "22px" }}>
+        <Link href={`/posts/${slug}`} _hover={{ textDecor: "none" }}>
           <Stack spacing={3}>
             <Text fontSize={14} color="grey.500">
               {published_at}
@@ -51,8 +46,8 @@ export default function HeroSection({
               {description}
             </Text>
           </Stack>
-        </Box>
-      </Flex>
-    </Link>
+        </Link>
+      </Box>
+    </Flex>
   );
 }

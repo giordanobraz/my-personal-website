@@ -19,15 +19,15 @@ export default function HeroSection({
   published_at,
 }: HeroPost) {
   return (
-    <Link href={`/posts/${slug}`} _hover={{ textDecor: "none" }}>
-      <Flex
-        flexDir={["column", "column", "column", "row"]}
-        w="100%"
-        style={{ gap: "16px" }}
-        bgColor="#262626"
-        padding="1rem"
-        rounded={"md"}
-      >
+    <Flex
+      flexDir={["column", "column", "column", "row"]}
+      w="100%"
+      style={{ gap: "16px" }}
+      bgColor="#262626"
+      padding="10px"
+      rounded={"md"}
+    >
+      <Link href={`/posts/${slug}`} _hover={{ textDecor: "none" }}>
         <Image
           src={`${image?.url}`}
           alt={title}
@@ -52,7 +52,7 @@ export default function HeroSection({
             </Text>
           </Stack>
         </Box>
-      </Flex>
-    </Link>
+      </Link>
+    </Flex>
   );
 }

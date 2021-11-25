@@ -25,7 +25,7 @@ export default function HeroSection({
         w="100%"
         style={{ gap: "16px" }}
         bgColor="#262626"
-        padding="1rem"
+        padding="10px"
         rounded={"md"}
       >
         <Image
