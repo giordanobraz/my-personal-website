@@ -10,13 +10,12 @@ import { theme } from "../styles/theme";
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <>
-      <SiteScripts />
       <ChakraProvider theme={theme}>
-        <ScaleFade key={router.route} initialScale={0.9} in={true}>
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
-        </ScaleFade>
+        <SiteScripts />
+        <Header />
+        <ScaleFade key={router.route} initialScale={0.9} in={true} />
+        <Component {...pageProps} />
+        <Footer />
       </ChakraProvider>
     </>
   );
