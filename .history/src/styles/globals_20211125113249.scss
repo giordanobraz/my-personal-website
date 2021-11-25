@@ -32,24 +32,17 @@
         color: #179af9 !important;
     }
     p {
-        margin: 1.5rem 0;
+        margin: 2rem 0;
     }
     figure {
         margin: 2rem auto;
         text-align: center;
+        background-color: rgb(27, 24, 24);
         img {
-            margin: 0 auto;
+            margin: 1rem auto;
         }
         figcaption {
-            padding: 0.6rem 0;
-            background-color: #242323;
             font-size: 1rem;
         }
-    }
-    h2 {
-        font-family: var(--chakra-fonts-heading);
-        font-weight: var(--chakra-fontWeigths-bold);
-        font-size: var(--chakra-fontSizes-3xl);
-        text-transform: uppercase;
     }
 }
