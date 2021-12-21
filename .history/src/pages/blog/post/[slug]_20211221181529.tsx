@@ -51,7 +51,7 @@ export default function Post({ post }: PostProps) {
           url: `"https://giordano.dev.br/blog/post/${post.slug}"`,
           title: `${post.title}`,
           description: `${post.description}`,
-          site_name: "Giordano Bruno - Desenvolvedor",
+          site_name: "Giordano Bruno - Desenvolvedor Fullstack",
           images: [
             {
               url: `${post.image.url}`,
