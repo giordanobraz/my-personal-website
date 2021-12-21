@@ -74,9 +74,9 @@ export default function BlogHome({ posts }: PostProps) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const response = await getAllPosts();
-  const posts = response.data;
+  const posts = response.data.json();
 
   posts.forEach((post: Post) => {
     post.published_at = new Date(post.published_at).toLocaleDateString(
@@ -87,7 +87,9 @@ export async function getServerSideProps() {
         year: "numeric",
       }
     );
-  }); 
+  });
+
+  console.log(posts);
 
   return {
     props: {

@@ -1,7 +1,7 @@
 import { Box, Divider, Flex, Heading, Stack } from "@chakra-ui/react";
-import HeroSection from "../../components/hero";
-import PreviousContent from "../../components/previous_content";
 import { getAllPosts } from "../../services/strapi";
+import HeroSection from "./components/hero";
+import PreviousContent from "./components/previous_content";
 
 interface Category {
   name: string;
@@ -29,7 +29,7 @@ interface HeroPost extends Post {}
 
 export default function BlogHome({ posts }: PostProps) {
   const hero_post: HeroPost = posts[0];
-  const previous_posts = posts.slice(1);
+  const previous_posts = posts.slice(1);  
 
   return (
     <>
@@ -74,7 +74,7 @@ export default function BlogHome({ posts }: PostProps) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const response = await getAllPosts();
   const posts = response.data;
 
@@ -87,7 +87,7 @@ export async function getServerSideProps() {
         year: "numeric",
       }
     );
-  }); 
+  });
 
   return {
     props: {

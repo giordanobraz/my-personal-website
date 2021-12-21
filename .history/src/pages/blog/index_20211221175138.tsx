@@ -76,7 +76,7 @@ export default function BlogHome({ posts }: PostProps) {
 
 export async function getServerSideProps() {
   const response = await getAllPosts();
-  const posts = response.data;
+  const posts = response.data.json();
 
   posts.forEach((post: Post) => {
     post.published_at = new Date(post.published_at).toLocaleDateString(

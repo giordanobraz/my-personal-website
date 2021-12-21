@@ -130,6 +130,6 @@ export const getStaticProps: GetStaticProps = async ({ params }: any) => {
         ...post,
         formatted_date,
       },
-    },    
+    },
   };
 };
