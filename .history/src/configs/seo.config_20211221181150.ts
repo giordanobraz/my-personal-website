@@ -6,7 +6,7 @@ const image_link = "https://avatars.githubusercontent.com/u/14043484?v=4?s=400";
 export default {
   title: `${site_name}`,
   description: `${description}`,
-  author: "Giordano Bruno Borges Braz da Silva",
+  author: "Giordano Bruno",
   language: "Portuguese",
   openGraph: {
     type: "website",
