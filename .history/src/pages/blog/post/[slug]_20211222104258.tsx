@@ -1,13 +1,8 @@
 import { Box, Flex, Heading, Stack } from "@chakra-ui/layout";
 import { Img } from "@chakra-ui/react";
+import { GetServerSideProps } from "next";
 import { NextSeo } from "next-seo";
 import { getPostBySlug } from "../../../services/strapi";
-
-interface Params {
-  params: {
-    slug: string;
-  };
-}
 
 interface Category {
   name: string;
@@ -102,7 +97,9 @@ export default function Post({ post }: PostProps) {
   );
 }
 
-export async function getServerSideProps({ params }: Params) {
+export const getServerSideProps: GetServerSideProps = async ({
+  params,
+}: any) => {
   const { slug } = params;
   const response = await getPostBySlug(slug);
   const post = response.data;
@@ -124,4 +121,4 @@ export async function getServerSideProps({ params }: Params) {
       },
     },
   };
-}
+};

@@ -3,12 +3,6 @@ import { Img } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { getPostBySlug } from "../../../services/strapi";
 
-interface Params {
-  params: {
-    slug: string;
-  };
-}
-
 interface Category {
   name: string;
   slug: string;
@@ -102,7 +96,7 @@ export default function Post({ post }: PostProps) {
   );
 }
 
-export async function getServerSideProps({ params }: Params) {
+export async function getServerSideProps({ params }: any) {
   const { slug } = params;
   const response = await getPostBySlug(slug);
   const post = response.data;

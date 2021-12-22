@@ -102,7 +102,7 @@ export default function Post({ post }: PostProps) {
   );
 }
 
-export async function getServerSideProps({ params }: Params) {
+export async function getServerSideProps({ params }: any) {
   const { slug } = params;
   const response = await getPostBySlug(slug);
   const post = response.data;

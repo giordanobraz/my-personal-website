@@ -88,15 +88,6 @@ export async function getStaticProps() {
   const getAllDataFromStrapi = await getAllPosts();
   const posts = getAllDataFromStrapi.data;
 
-  if (!posts) {
-    return {
-      redirect: {
-        destination: "/",
-        permanent: false,
-      },
-    };
-  }
-
   posts.forEach((post: Post) => {
     post.published_at = new Date(post.published_at).toLocaleDateString(
       "pt-BR",
@@ -112,6 +103,5 @@ export async function getStaticProps() {
     props: {
       posts,
     },
-    revalidate: 7200 /* 2h */,
   };
 }

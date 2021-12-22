@@ -1,13 +1,7 @@
 import { Box, Flex, Heading, Stack } from "@chakra-ui/layout";
 import { Img } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import { getPostBySlug } from "../../../services/strapi";
-
-interface Params {
-  params: {
-    slug: string;
-  };
-}
+import { useRouter } from "next/router";
 
 interface Category {
   name: string;
@@ -102,26 +96,50 @@ export default function Post({ post }: PostProps) {
   );
 }
 
-export async function getServerSideProps({ params }: Params) {
-  const { slug } = params;
-  const response = await getPostBySlug(slug);
-  const post = response.data;
-
-  const formatted_date = new Date(post.published_at).toLocaleDateString(
-    "pt-BR",
-    {
-      day: "2-digit",
-      month: "long",
-      year: "numeric",
-    }
-  );
-
-  return {
-    props: {
-      post: {
-        ...post,
-        formatted_date,
-      },
-    },
-  };
+export async function getStaticPaths() {
+  paths: [],
+  fallback: "blocking",
 }
+
+export async function getStaticProps() {
+  const router = useRouter();
+  const { slug } = router.query;
+  return <p>Post: { slug }</p> 
+}
+
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const response = await getAllPosts();
+//   const posts = response.data;
+
+//   return {
+//     paths: posts.map((post: any) => ({
+//       params: {
+//         slug: post.slug,
+//       },
+//     })),
+//     fallback: "blocking",
+//   };
+// };
+
+// export const getStaticProps: GetStaticProps = async ({ params }: any) => {
+//   const { slug } = params;
+//   const response = await getPostBySlug(slug);
+//   const post = response.data;
+//   // const formatted_content = await markdownToHtml(post.content);
+//   const formatted_date = new Date(post.published_at).toLocaleDateString(
+//     "pt-BR",
+//     {
+//       day: "2-digit",
+//       month: "long",
+//       year: "numeric",
+//     }
+//   );
+//   return {
+//     props: {
+//       post: {
+//         ...post,
+//         formatted_date,
+//       },
+//     },
+//   };
+// };
