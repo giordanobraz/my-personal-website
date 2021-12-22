@@ -6,7 +6,7 @@ import Document, {
   Main,
   NextScript
 } from "next/document";
-import DefaultMeta from "../components/Meta";
+import DefaultMeta from "../components/meta";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
