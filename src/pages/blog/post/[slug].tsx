@@ -1,7 +1,8 @@
-import { Box, Flex, Heading, Stack } from "@chakra-ui/layout";
+import { Box, Heading, Stack, VStack } from "@chakra-ui/layout";
 import { Img } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import Layout from "../../../components/blogLayout";
 import { getAllPosts, getPostBySlug } from "../../../services/strapi";
 
 interface Params {
@@ -13,14 +14,6 @@ interface Params {
 interface Category {
   name: string;
   slug: string;
-}
-
-interface Author {
-  name: string;
-  email: string;
-  picture: {
-    url: string;
-  };
 }
 
 interface PostProps {
@@ -80,15 +73,8 @@ export default function Post({ post, formatted_date }: PostProps) {
         }}
       />
 
-      <Flex
-        flexDir="column"
-        maxWidth="1120px"
-        margin="0 auto"
-        paddingX="2em"
-        paddingTop={100}
-        style={{ gap: "20px" }}
-      >
-        <Stack spacing={25} minH={"calc(100vh - 10rem)"}>
+      <Layout>
+        <Stack paddingTop={"70px"} flexDir={"column"} spacing={5}>
           <Img
             src={`${post.attributes.image?.data.attributes.url}`}
             alt={post.attributes.title}
@@ -98,22 +84,29 @@ export default function Post({ post, formatted_date }: PostProps) {
             id="top"
           />
 
-          <Stack spacing={3}>
-            <Heading fontSize="md" color="grey.500" textAlign="left">
-              {formatted_date}
-            </Heading>
-            <Heading fontSize="6xl" textTransform="uppercase">
-              {post.attributes.title}
-            </Heading>
+          <Stack minWidth={"100%"}>
+            <VStack maxWidth={"900px"} margin={"0 auto"}>
+              <Heading fontSize={"md"} color="grey.500" textAlign="left">
+                {formatted_date}
+              </Heading>
+              <Heading
+                fontSize={["2xl", "3xl", "6xl"]}
+                textTransform="uppercase"
+              >
+                {post.attributes.title}
+              </Heading>
+              <Box fontSize={["sm", "md"]} color="grey.300" fontFamily="Roboto">
+                <div
+                  className="ck-content article"
+                  dangerouslySetInnerHTML={createMarkup(
+                    post.attributes.content
+                  )}
+                />
+              </Box>
+            </VStack>
           </Stack>
-          <Box fontSize="xl" color="grey.300" fontFamily="Roboto">
-            <div
-              className="ck-content article"
-              dangerouslySetInnerHTML={createMarkup(post.attributes.content)}
-            />
-          </Box>
         </Stack>
-      </Flex>
+      </Layout>
     </>
   );
 }
