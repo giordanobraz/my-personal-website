@@ -10,16 +10,24 @@ interface Category {
 }
 
 interface Post {
-  title: string;
-  description: string;
-  content: string;
-  slug: string;
-  image: {
-    url: string;
+  id: number;
+  attributes: {
+    title: string;
+    description: string;
+    content: string;
+    slug: string;
+    image: {
+      data: {
+        id: number;
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    author: string;
+    category: Category[];
+    publishedAt: string;
   };
-  author: string;
-  category: Category[];
-  published_at: string;
 }
 
 interface PostProps {
@@ -64,11 +72,11 @@ export default function BlogHome({ posts }: PostProps) {
         >
           {hero_post && (
             <HeroSection
-              title={hero_post.title}
-              description={hero_post.description}
-              slug={hero_post.slug}
-              image={hero_post.image}
-              published_at={hero_post.published_at}
+              title={hero_post.attributes.title}
+              description={hero_post.attributes.description}
+              slug={hero_post.attributes.slug}
+              image={hero_post.attributes.image}
+              published_at={hero_post.attributes.publishedAt}
             />
           )}
           <Stack spacing={2}>
@@ -84,9 +92,9 @@ export default function BlogHome({ posts }: PostProps) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const getAllDataFromStrapi = await getAllPosts();
-  const posts = getAllDataFromStrapi.data;
+  const posts = getAllDataFromStrapi.data.data;
 
   if (!posts) {
     return {
@@ -97,21 +105,20 @@ export async function getStaticProps() {
     };
   }
 
-  posts.forEach((post: Post) => {
-    post.published_at = new Date(post.published_at).toLocaleDateString(
-      "pt-BR",
-      {
-        day: "2-digit",
-        month: "long",
-        year: "numeric",
-      }
-    );
+  posts.forEach((post: any) => {
+    post.attributes.publishedAt = new Date(
+      post.attributes.publishedAt
+    ).toLocaleDateString("pt-BR", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    });
   });
 
   return {
     props: {
       posts,
     },
-    revalidate: 7200 /* 2h */,
+    // revalidate: 7200 /* 2h */,
   };
 }

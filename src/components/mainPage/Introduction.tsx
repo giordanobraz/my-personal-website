@@ -3,7 +3,7 @@ import ReactCountryFlag from "react-country-flag";
 
 export default function IntroductionSection() {
   return (
-    <section id="intro">
+    <section id="top">
       <Stack
       flexDir={["column", "column", "row"]}
       paddingY={"4.18rem"}

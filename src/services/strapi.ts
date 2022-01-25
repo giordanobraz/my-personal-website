@@ -5,12 +5,16 @@ export const strapi_api = axios.create({
 });
 
 export const getAllPosts = async () => {
-  const posts = await strapi_api.get("/articles?_sort=published_at:DESC").then((posts) => posts);
+  const posts = await strapi_api
+    .get("/articles?sort[0]=publishedAt%3Adesc&populate=%2A")
+    .then((posts) => posts);
   return posts;
 };
 
 export const getPostBySlug = async (slug: string) => {
-  const post = await strapi_api.get(`/articles/${slug}`).then((post) => post);
+  const post = await strapi_api
+    .get(`/articles?filters[slug][$eq]=${slug}&populate=%2A`)
+    .then((post) => post);
   return post;
 };
 

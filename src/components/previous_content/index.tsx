@@ -7,16 +7,24 @@ interface Category {
 }
 
 interface Post {
-  title: string;
-  description: string;
-  content: string;
-  slug: string;
-  image: {
-    url: string;
+  id: number;
+  attributes: {
+    title: string;
+    description: string;
+    content: string;
+    slug: string;
+    image: {
+      data: {
+        id: number;
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    author: string;
+    category: Category[];
+    publishedAt: string;
   };
-  author: string;
-  category: Category[];
-  published_at: string;
 }
 
 interface PostProps {
@@ -26,16 +34,16 @@ interface PostProps {
 export default function PreviousContent({ previous_posts }: PostProps) {
   return (
     <SimpleGrid columns={[1, 2, 3]} spacing={10}>
-      {previous_posts.map((post) => (
+      {previous_posts.map((post: Post) => (
         <Link
-          key={post.slug}
-          href={`/blog/post/${post.slug}`}
+          key={post.attributes.slug}
+          href={`/blog/post/${post.attributes.slug}`}
           _hover={{ textDecor: "none" }}
         >
-          <Flex flexDir={"column"} key={post.slug} style={{ gap: "15px" }}>
+          <Flex flexDir={"column"} style={{ gap: "15px" }}>
             <Image
-              src={`${post.image?.url}`}
-              alt={`${post.title}`}
+              src={`${post.attributes.image.data.attributes.url}`}
+              alt={`${post.attributes.title}`}
               loading="eager"
               objectFit="cover"
               maxHeight={300}
@@ -43,11 +51,11 @@ export default function PreviousContent({ previous_posts }: PostProps) {
 
             <Stack cursor="default">
               <Text fontSize={14} color={"grey.300"}>
-                {post.published_at}
+                {post.attributes.publishedAt}
               </Text>
-              <Heading fontSize={26}>{post.title}</Heading>
+              <Heading fontSize={26}>{post.attributes.title}</Heading>
               <Text fontSize={16} color={"grey.200"}>
-                {post.description}
+                {post.attributes.description}
               </Text>
             </Stack>
           </Flex>

@@ -7,7 +7,12 @@ interface HeroPost {
   slug: string;
   published_at: string;
   image: {
-    url: string;
+    data: {
+      id: number;
+      attributes: {
+        url: string;
+      };
+    };
   };
 }
 
@@ -20,13 +25,13 @@ export default function HeroSection({
 }: HeroPost) {
   return (
     <Link href={`/blog/post/${slug}`} _hover={{ textDecor: "none" }}>
-      <Stack 
-      flexDir={["column", "column", "row"]}
-      justifyContent={"space-between"}      
-      style={{ gap: "20px"}}
+      <Stack
+        flexDir={["column", "column", "row"]}
+        justifyContent={"space-between"}
+        style={{ gap: "20px" }}
       >
         <Image
-          src={`${image?.url}`}
+          src={`${image.data.attributes.url}`}
           alt={title}
           loading="eager"
           objectFit="cover"
@@ -34,12 +39,14 @@ export default function HeroSection({
           maxHeight={300}
         />
 
-        <Stack
-        maxWidth={"500px"}
-        >
-          <Text color={"grey.300"} fontSize={[14,18]}>{published_at}</Text>
-          <Heading fontSize={[36,42]}>{title}</Heading>
-          <Text color={"grey.200"} fontSize={[16,20]}>{description}</Text>
+        <Stack maxWidth={"500px"}>
+          <Text color={"grey.300"} fontSize={[14, 18]}>
+            {published_at}
+          </Text>
+          <Heading fontSize={[36, 42]}>{title}</Heading>
+          <Text color={"grey.200"} fontSize={[16, 20]}>
+            {description}
+          </Text>
         </Stack>
       </Stack>
     </Link>
