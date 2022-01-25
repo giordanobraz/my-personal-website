@@ -92,7 +92,7 @@ export default function BlogHome({ posts }: PostProps) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const getAllDataFromStrapi = await getAllPosts();
   const posts = getAllDataFromStrapi.data.data;
 

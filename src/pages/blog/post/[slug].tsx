@@ -138,8 +138,6 @@ export async function getStaticProps({ params }: Params) {
   const response = await getPostBySlug(slug);
   const post = response.data.data[0];
 
-  console.log("Post", post);
-
   const formatted_date = new Date(
     post.attributes.publishedAt
   ).toLocaleDateString("pt-BR", {
