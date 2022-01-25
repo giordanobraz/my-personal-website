@@ -92,7 +92,7 @@ export default function BlogHome({ posts }: PostProps) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const getAllDataFromStrapi = await getAllPosts();
   const posts = getAllDataFromStrapi.data.data;
 
@@ -119,6 +119,6 @@ export async function getServerSideProps() {
     props: {
       posts,
     },
-    // revalidate: 7200 /* 2h */,
+    revalidate: 7200 /* 2h */,
   };
 }
