@@ -2,6 +2,9 @@ import axios from "axios";
 
 export const strapi_api = axios.create({
   baseURL: `${process.env.NEXT_PUBLIC_STRAPI_API}`,
+  headers: {
+    Authorization: `Bearer ${process.env.API_TOKEN_KEY}`,
+  },
 });
 
 export const getAllPosts = async () => {
