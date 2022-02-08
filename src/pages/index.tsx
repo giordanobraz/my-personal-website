@@ -1,8 +1,8 @@
 import { DefaultSeo } from "next-seo";
-import ContactSection from "../components/mainPage/Contact";
-import ExperienceSection from "../components/mainPage/Experiences";
-import IntroductionSection from "../components/mainPage/Introduction";
-import ProjectSection from "../components/mainPage/Projects";
+import ContactSection from "../components/homepage/Contact";
+import ExperienceSection from "../components/homepage/Experiences";
+import IntroductionSection from "../components/homepage/Introduction";
+import ProjectSection from "../components/homepage/Projects";
 import SEO from "../configs/seo.config";
 
 export default function HomePage() {

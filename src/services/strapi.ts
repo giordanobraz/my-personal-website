@@ -21,7 +21,9 @@ export const getPostBySlug = async (slug: string) => {
   return post;
 };
 
-export const getGlobalProps = async () => {
-  const global = await strapi_api.get(`/global`).then((props) => props);
-  return global;
+export const getGlobalSeoData = async () => {
+  const response = await strapi_api
+    .get(`/global?populate=%2A`)
+    .then((global) => global);
+  return response.data;
 };

@@ -4,9 +4,9 @@ import Document, {
   Head,
   Html,
   Main,
-  NextScript
+  NextScript,
 } from "next/document";
-import DefaultMeta from "../components/metaTags";
+import DefaultMeta from "../components/shared/metaTags";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {

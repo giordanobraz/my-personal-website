@@ -1,7 +1,7 @@
 import { Box, Divider, Flex, Heading, Stack } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import HeroSection from "../../components/hero";
-import PreviousContent from "../../components/previous_content";
+import HeroSection from "../../components/blog/hero";
+import PreviousContent from "../../components/blog/previous_content";
 import { getAllPosts } from "../../services/strapi";
 
 interface Category {
@@ -40,17 +40,19 @@ export default function BlogHome({ posts }: PostProps) {
   const hero_post: HeroPost = posts[0];
   const previous_posts = posts.slice(1);
 
+  const seo = {
+    title: `Blog | Giordano Bruno - Desenvolvedor`,
+    description: "Blog do Giordano",
+    openGraph: {
+      type: "website",
+      url: `"https://giordano.dev.br/blog"`,
+      site_name: "Giordano Bruno - Desenvolvedor",
+    },
+  };
+
   return (
     <>
-      <NextSeo
-        title={`Blog | Giordano Bruno - Desenvolvedor`}
-        description="Blog do Giordano"
-        openGraph={{
-          type: "website",
-          url: `"https://giordano.dev.br/blog"`,
-          site_name: "Giordano Bruno - Desenvolvedor",
-        }}
-      />
+      <NextSeo {...seo} />
       <Flex
         flexDir={"column"}
         maxWidth="1160px"
@@ -92,7 +94,7 @@ export default function BlogHome({ posts }: PostProps) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const getAllDataFromStrapi = await getAllPosts();
   const posts = getAllDataFromStrapi.data.data;
 
@@ -119,6 +121,6 @@ export async function getStaticProps() {
     props: {
       posts,
     },
-    revalidate: 7200 /* 2h */,
+    // revalidate: 7200 /* 2h */,
   };
 }

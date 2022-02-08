@@ -24,17 +24,14 @@
 
 .article {
   font-family: "Roboto", sans-serif;
+  color: #c4c4cc;
   a {
     text-decoration: underline !important;
     color: #179af9 !important;
   }
-  p {
-    color: #c4c4cc;
-    margin: 1.5rem 0;
-  }
   h2 {
     color: #e1e1e6;
-    margin-top: 2rem;
+    margin: 1.5rem 0;
     font-family: var(--chakra-fonts-heading);
     font-weight: 700;
     font-size: var(--chakra-fontSizes-2xl);

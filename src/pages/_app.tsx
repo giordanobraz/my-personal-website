@@ -1,10 +1,10 @@
 import { ChakraProvider, CSSReset, ScaleFade } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import "../../public/prism/prism.css";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import SiteScripts from "../components/scripts";
-import ScrollToTop from "../components/scrollToTopButton";
+import Footer from "../components/shared/footer";
+import Header from "../components/shared/header";
+import SiteScripts from "../components/shared/scripts";
+import ScrollToTop from "../components/shared/scrollToTopButton";
 import "../styles/globals.scss";
 import { theme } from "../styles/theme";
 

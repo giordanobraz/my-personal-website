@@ -11,7 +11,7 @@ export default {
   openGraph: {
     type: "website",
     url: "https://giordano.dev.br",
-    locale: "pt_BR",
+    locale: "pt-BR",
     title: `${site_name}`,
     description: `${description}`,
     site_name: `${site_name}`,
