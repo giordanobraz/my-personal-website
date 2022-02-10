@@ -8,7 +8,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
-  useDisclosure
+  useDisclosure,
 } from "@chakra-ui/react";
 
 export interface NavItem {
@@ -42,7 +42,12 @@ export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box boxShadow={"0 2px 10px #000000"} position={"fixed"} w={"100%"}>
+    <Box
+      boxShadow={"0 2px 10px #000000"}
+      position={"fixed"}
+      w={"100%"}
+      zIndex={1000}
+    >
       <Flex
         bg={"grey.700"}
         color={"grey.100"}
