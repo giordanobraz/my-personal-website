@@ -1,3 +1,10 @@
 # My Personal Website
 
-Projeto portfólio desenvolvido em React + Nextjs.
+Feel free to try :)
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn run dev`
+
