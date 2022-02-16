@@ -74,7 +74,11 @@ export default function HeroSection({
         >
           <Text>{published_at}</Text>
           <Heading marginTop="1">
-            <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+            <Link
+              href={`/blog/post/${slug}`}
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+            >
               {title}
             </Link>
           </Heading>
