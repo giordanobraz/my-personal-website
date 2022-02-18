@@ -3,7 +3,7 @@ import { Img } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import Layout from "../../../components/blog/blogLayout";
-import { getPostBySlug } from "../../../services/strapi";
+import { getAllPosts, getPostBySlug } from "../../../services/strapi";
 
 interface Params {
   params: {
@@ -114,25 +114,10 @@ export default function Post({ post, formatted_date }: PostProps) {
   );
 }
 
-// export async function getStaticPaths() {
-//   const allPosts = await getAllPosts();
-
-//   const paths = allPosts.data.data.map((post: any) => ({
-//     params: {
-//       slug: post.attributes.slug,
-//     },
-//   }));
-
-//   return {
-//     paths,
-//     fallback: true,
-//   };
-// }
-
-export async function getServerSideProps({ params }: Params) {
+export async function getStaticProps({ params }: Params) {
   const { slug } = params;
   const response = await getPostBySlug(slug);
-  const post = response.data.data[0];
+  const post = response.data[0];
 
   const formatted_date = new Date(
     post.attributes.publishedAt
@@ -147,5 +132,21 @@ export async function getServerSideProps({ params }: Params) {
       post,
       formatted_date,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  const getAllDataFromStrapi = await getAllPosts();
+  const posts = getAllDataFromStrapi.data;
+
+  return {
+    fallback: false,
+    paths: posts.map((post: any) => {
+      return {
+        params: {
+          slug: post.attributes.slug,
+        },
+      };
+    }),
   };
 }

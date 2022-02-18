@@ -8,22 +8,23 @@ export const strapi_api = axios.create({
 });
 
 export const getAllPosts = async () => {
-  const posts = await strapi_api
-    .get("/articles?sort[0]=publishedAt%3Adesc&populate=%2A")
-    .then((posts) => posts);
-  return posts;
+  const posts = await strapi_api.get(
+    "/articles?sort[0]=publishedAt%3Adesc&populate=%2A"
+  );
+
+  return posts.data;
 };
 
 export const getPostBySlug = async (slug: string) => {
-  const post = await strapi_api
-    .get(`/articles?filters[slug][$eq]=${slug}&populate=%2A`)
-    .then((post) => post);
-  return post;
+  const post = await strapi_api.get(
+    `/articles?filters[slug][$eq]=${slug}&populate=%2A`
+  );
+
+  return post.data;
 };
 
 export const getGlobalSeoData = async () => {
-  const response = await strapi_api
-    .get(`/global?populate=%2A`)
-    .then((global) => global);
+  const response = await strapi_api.get(`/global?populate=%2A`);
+
   return response.data;
 };

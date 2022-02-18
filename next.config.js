@@ -9,7 +9,7 @@ module.exports = {
     ],
   },
   i18n: {
-    locales: ["pt-BR"],
-    defaultLocale: "pt-BR",
+    locales: ["pt-BR", "en-US"],
+    defaultLocale: "en-US",
   },
 };

@@ -7,3 +7,9 @@ export const gpu_api = axios.create({
 export const getAllProducts = async () => {
   return await gpu_api.get("/products");
 };
+
+export const getProductHistory = async (id: string) => {
+  return await gpu_api
+    .get(`/products/${id}/history`)
+    .then((response) => response.data);
+};

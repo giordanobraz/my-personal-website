@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Center,
   Heading,
   Image,
@@ -7,20 +8,39 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useState } from "react";
+import { PriceHistory } from "../../pages/gpu";
+import ProductChart from "./ProductChartModal";
 
 const IMAGE = "/images/gpu_card.jpg";
 
 interface IProductsProps {
+  id: string;
+  itemIndex: any;
   title: string;
   price: number;
   updatedPrice: number;
+  priceHistory: PriceHistory[];
 }
 
 export default function Product({
   title,
   price,
   updatedPrice,
+  priceHistory,
 }: IProductsProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [index, setIndex] = useState(null);
+
+  function handleOpenModal(index: any) {
+    setIndex(index);
+    setIsOpen(true);
+  }
+
+  function handleCloseModal() {
+    setIsOpen(false);
+  }
+
   return (
     <Center py={12}>
       <Box
@@ -64,6 +84,7 @@ export default function Product({
             width={282}
             objectFit={"cover"}
             src={IMAGE}
+            alt={"Image."}
           />
         </Box>
         <Stack pt={10} align={"center"}>
@@ -75,7 +96,6 @@ export default function Product({
             color={"grey.400"}
           >
             {title}
-            {/* {title.substring(0, 70) + "..."} */}
           </Heading>
           <Stack direction={"row"} align={"center"}>
             <Text fontWeight={800} fontSize={"xl"} color={"grey.300"}>
@@ -98,6 +118,14 @@ export default function Product({
                 : ``}
             </Text>
           </Stack>
+          <Button onClick={(e) => handleOpenModal(index)} />
+          <ProductChart
+            isOpen={isOpen}
+            onRequestClose={handleCloseModal}
+            priceHistory={priceHistory}
+            title={title}
+            openModal={(e) => handleOpenModal(index)}
+          />
         </Stack>
       </Box>
     </Center>

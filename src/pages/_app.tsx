@@ -5,6 +5,7 @@ import Footer from "../components/shared/footer";
 import Header from "../components/shared/header";
 import SiteScripts from "../components/shared/scripts";
 import ScrollToTop from "../components/shared/scrollToTopButton";
+import { LocaleProvider } from "../hooks/useLocale";
 import "../styles/globals.scss";
 import { theme } from "../styles/theme";
 
@@ -15,10 +16,12 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <ChakraProvider theme={theme}>
         <CSSReset />
         <ScaleFade key={router.route} initialScale={0.9} in={true}>
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
-          <ScrollToTop />
+          <LocaleProvider>
+            <Header />
+            <Component {...pageProps} />
+            <Footer />
+            <ScrollToTop />
+          </LocaleProvider>
         </ScaleFade>
       </ChakraProvider>
     </>
