@@ -57,8 +57,8 @@ export default function ProjectSection() {
                     flexDir={["column", "column", "row"]}
                     justifyContent={"space-between"}
                   >
-                    <Heading fontSize={"1.2rem"}>API Básica</Heading>
-                    <Text>API REST Node</Text>
+                    <Heading fontSize={"1.2rem"}>Portfólio</Heading>
+                    <Text>Website</Text>
                   </Flex>
                   <Flex
                     marginTop={"1rem"}
@@ -66,13 +66,12 @@ export default function ProjectSection() {
                     justifyContent={"space-between"}
                   >
                     <Text maxWidth={["100%", "100%", "60%"]}>
-                      API feita em NestJS com finalidade de estudo. Autenticação
-                      JWT, CRUD básico e MongoDB.
+                      Meu website portfólio, desenvolvido com Next.js.
                     </Text>
                   </Flex>
                   <Box marginY={"1.2rem"} color={"grey.100"}>
                     <Link
-                      href="https://github.com/giordanobraz/nestjs-api"
+                      href="https://github.com/giordanobraz/my-personal-website"
                       target="_blank"
                     >
                       Acessar
@@ -80,11 +79,8 @@ export default function ProjectSection() {
                   </Box>
                 </Box>
 
-                <Link
-                  href="/downloads/Giordano_Bruno_Curriculo.pdf"
-                  target="_blank"
-                >
-                  Ver currículo completo
+                <Link href="https://github.com/giordanobraz" target="_blank">
+                  Ver Mais
                 </Link>
               </Stack>
 
@@ -131,8 +127,8 @@ export default function ProjectSection() {
                     flexDir={["column", "column", "row"]}
                     justifyContent={"space-between"}
                   >
-                    <Heading fontSize={"1.2rem"}>Basic API</Heading>
-                    <Text>RESTful Node API</Text>
+                    <Heading fontSize={"1.2rem"}>Portfolio Website</Heading>
+                    <Text>Website</Text>
                   </Flex>
                   <Flex
                     marginTop={"1rem"}
@@ -140,13 +136,12 @@ export default function ProjectSection() {
                     justifyContent={"space-between"}
                   >
                     <Text maxWidth={["100%", "100%", "60%"]}>
-                      API created with NestJS for study purposes only. Featuring
-                      JWT Auth and basic CRUD with MongoDB.
+                      My portfolio website, developed with Next.js.
                     </Text>
                   </Flex>
                   <Box marginY={"1.2rem"} color={"grey.100"}>
                     <Link
-                      href="https://github.com/giordanobraz/nestjs-api"
+                      href="https://github.com/giordanobraz/my-personal-website"
                       target="_blank"
                     >
                       Open
@@ -154,11 +149,8 @@ export default function ProjectSection() {
                   </Box>
                 </Box>
 
-                <Link
-                  href="/downloads/Giordano_Bruno_Curriculo.pdf"
-                  target="_blank"
-                >
-                  See Resume
+                <Link href="https://github.com/giordanobraz" target="_blank">
+                  See More
                 </Link>
               </Stack>
 

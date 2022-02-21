@@ -41,7 +41,7 @@ export default function Footer() {
               {" "}
               MIT{" "}
             </Link>
-            license . {new Date().getFullYear()}.
+            license. {new Date().getFullYear()}.
           </Text>
         </>
       )}

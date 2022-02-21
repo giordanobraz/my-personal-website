@@ -61,7 +61,7 @@ export default function BlogHome({ posts }: PostProps) {
         paddingY={"7rem"}
       >
         <Box borderLeft={"8px solid"} borderColor={"purple.500"}>
-          <Heading fontSize={["36px", "72px"]} marginLeft={"10px"}>
+          <Heading id="top" fontSize={["36px", "72px"]} marginLeft={"10px"}>
             Blog
           </Heading>
         </Box>
