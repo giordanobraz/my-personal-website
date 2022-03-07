@@ -1,3 +1,4 @@
+import { SearchIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -95,7 +96,7 @@ export default function Product({
             textOverflow={"ellipsis"}
             color={"grey.400"}
           >
-            {title}
+            {title.substring(0, 50) + `...`}
           </Heading>
           <Stack direction={"row"} align={"center"}>
             <Text fontWeight={800} fontSize={"xl"} color={"grey.300"}>
@@ -118,7 +119,9 @@ export default function Product({
                 : ``}
             </Text>
           </Stack>
-          <Button onClick={(e) => handleOpenModal(index)} />
+          <Button onClick={(e) => handleOpenModal(index)}>
+            <SearchIcon />
+          </Button>
           <ProductChart
             isOpen={isOpen}
             onRequestClose={handleCloseModal}

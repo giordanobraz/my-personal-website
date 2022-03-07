@@ -1,4 +1,5 @@
-import { Button, Flex, VStack } from "@chakra-ui/react";
+import { CloseIcon } from "@chakra-ui/icons";
+import { Button, VStack } from "@chakra-ui/react";
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -103,17 +104,29 @@ export default function ProductChart({
       style={{
         overlay: {
           zIndex: 999,
-          maxHeight: "600px",
+          background: "rgba(0,0,0,0.5)",
+          position: "fixed",
+          top: 0,
+          bottom: 0,
+          right: 0,
+          left: 0,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        },
+        content: {
+          width: "100%",
           maxWidth: "800px",
-          top: "20%",
-          left: "30%",
+          padding: "3rem",
+          position: "relative",
+          borderRadius: "0.25rem",
         },
       }}
     >
       <VStack>
-        <Flex width={"100%"}>
-          <Button onClick={onRequestClose} alignSelf={"end"} />
-        </Flex>
+        <Button onClick={onRequestClose} alignSelf="end">
+          <CloseIcon />
+        </Button>
         <Line options={options} data={data} />
       </VStack>
     </Modal>
