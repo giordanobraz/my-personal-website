@@ -15,7 +15,7 @@ export default function InternalServerErrorPage() {
   }, [count, router]);
 
   return (
-    <Center height={"calc(100vh - 10rem)"}>
+    <Center height={"calc(100vh - 10rem)"} flexDir={"column"}>
       <h1>Erro interno do servidor!</h1>
       <p>
         Redirecionando para a página inicial em <span>{count}</span> segundos.

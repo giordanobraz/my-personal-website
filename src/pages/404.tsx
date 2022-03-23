@@ -15,7 +15,7 @@ export default function Custom404() {
   }, [count, router]);
 
   return (
-    <Center height={"calc(100vh - 10rem)"}>
+    <Center height={"calc(100vh - 10rem)"} flexDir={"column"}>
       <h1>Página não encontrada!</h1>
       <p>
         Redirecionando em <span>{count}</span> segundos.
