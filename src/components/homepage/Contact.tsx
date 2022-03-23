@@ -46,8 +46,8 @@ export default function ContactSection() {
                   marginRight={2}
                   width={5}
                 />
-                <Link href="https://wa.me/5594992897744" target="_blank">
-                  +5594992897744
+                <Link href="https://wa.me/5598992197744" target="_blank">
+                  +55 98 992 19 7744
                 </Link>
               </Flex>
 
@@ -91,12 +91,12 @@ export default function ContactSection() {
               <Flex flexDir={"row"} paddingY={5}>
                 <Image
                   src="/images/logo_whatsapp.svg"
-                  alt="Whatsapp"
+                  alt="WhatsApp"
                   marginRight={2}
                   width={5}
                 />
-                <Link href="https://wa.me/5594992897744" target="_blank">
-                  +5594992897744
+                <Link href="https://wa.me/5598992197744" target="_blank">
+                  +55 98 992 19 7744
                 </Link>
               </Flex>
 
