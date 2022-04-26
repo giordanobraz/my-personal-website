@@ -132,6 +132,7 @@ export async function getStaticProps({ params }: Params) {
       post,
       formatted_date,
     },
+    revalidate: 60,
   };
 }
 
