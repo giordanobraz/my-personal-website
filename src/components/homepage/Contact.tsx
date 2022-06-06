@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
+
 import { useLocale } from "../../hooks/useLocale";
 
 export default function ContactSection() {
@@ -58,9 +59,7 @@ export default function ContactSection() {
                   marginRight={2}
                   width={5}
                 />
-                <Link href="mailto:giordanosi2011@gmail.com">
-                  giordanosi2011@gmail.com
-                </Link>
+                <Link href="mailto:eu@giordano.dev.br">eu@giordano.dev.br</Link>
               </Flex>
             </Box>
           </>
@@ -107,9 +106,7 @@ export default function ContactSection() {
                   marginRight={2}
                   width={5}
                 />
-                <Link href="mailto:giordanosi2011@gmail.com">
-                  giordanosi2011@gmail.com
-                </Link>
+                <Link href="mailto:eu@giordano.dev.br">eu@giordano.dev.br</Link>
               </Flex>
             </Box>
           </>
