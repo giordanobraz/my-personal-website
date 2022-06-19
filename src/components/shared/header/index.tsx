@@ -1,5 +1,5 @@
-import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Flex } from "@chakra-ui/layout";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Collapse,
   IconButton,
@@ -22,10 +22,10 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Home",
     href: "/",
   },
-  {
-    label: "Blog",
-    href: "/blog",
-  },
+  // {
+  //   label: "Blog",
+  //   href: "/blog",
+  // },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/giordano-bruno-silva/",
