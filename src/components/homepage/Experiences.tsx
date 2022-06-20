@@ -1,13 +1,14 @@
 import {
   Box,
   Flex,
-  Heading,
   HStack,
+  Heading,
   Image,
   Link,
   Stack,
   Text,
 } from "@chakra-ui/react";
+
 import { useLocale } from "../../hooks/useLocale";
 
 export default function ExperienceSection() {
@@ -71,7 +72,41 @@ export default function ExperienceSection() {
 
               <Box borderLeft={"4px solid"} borderColor={"purple.500"}>
                 <Text fontSize={"1rem"} marginLeft={"10px"}>
-                  10/2021 - Atualmente
+                  Jun 2022 - Atualmente
+                </Text>
+              </Box>
+
+              <Box paddingX={"10px"} paddingY={"15px"} bgColor={"grey.700"}>
+                <Flex
+                  flexDir={["column", "column", "row"]}
+                  justifyContent={"space-between"}
+                >
+                  <Heading fontSize={"1.2rem"}>
+                    ShelterBuddy International Inc.
+                  </Heading>
+                  <Text>Dev Front End</Text>
+                </Flex>
+                <Flex
+                  marginTop={"1rem"}
+                  flexDir={["column", "column", "row"]}
+                  justifyContent={"space-between"}
+                >
+                  <Text maxWidth={["100%", "100%", "40%"]}>
+                    Desenvolvimento de interfaces para o projeto.
+                  </Text>
+                  <HStack flexDir="row" spacing={1} marginTop={"10px"}>
+                    <Image
+                      src="/images/logo_react.svg"
+                      alt="React"
+                      title="React"
+                    />
+                  </HStack>
+                </Flex>
+              </Box>
+
+              <Box borderLeft={"4px solid"} borderColor={"purple.500"}>
+                <Text fontSize={"1rem"} marginLeft={"10px"}>
+                  Out 2021 - Abr 2022
                 </Text>
               </Box>
 
@@ -81,7 +116,7 @@ export default function ExperienceSection() {
                   justifyContent={"space-between"}
                 >
                   <Heading fontSize={"1.2rem"}>Wipro do Brasil</Heading>
-                  <Text>Dev back-end</Text>
+                  <Text>Dev Back End</Text>
                 </Flex>
                 <Flex
                   marginTop={"1rem"}
@@ -92,40 +127,14 @@ export default function ExperienceSection() {
                     Desenvolvimento back-end em Node.
                   </Text>
                   <Box justifyContent="center" marginTop={"10px"}>
-                    <Image src="/images/logo_node.svg" alt="Node" />
+                    <Image
+                      src="/images/logo_node.svg"
+                      alt="Node"
+                      title="Node"
+                    />
                   </Box>
                 </Flex>
               </Box>
-              <Box borderLeft={"4px solid"} borderColor={"purple.500"}>
-                <Text fontSize={"1rem"} marginLeft={"10px"}>
-                  Fev 2020 - Mar 2021
-                </Text>
-              </Box>
-
-              <Box paddingX={"10px"} paddingY={"15px"} bgColor={"grey.700"}>
-                <Flex
-                  flexDir={["column", "column", "row"]}
-                  justifyContent={"space-between"}
-                >
-                  <Heading fontSize={"1.2rem"}>Devplus Desenvolvimento</Heading>
-                  <Text>Dev Fullstack</Text>
-                </Flex>
-                <Flex
-                  marginTop={"1rem"}
-                  flexDir={["column", "column", "row"]}
-                  justifyContent={"space-between"}
-                >
-                  <Text maxWidth={["100%", "100%", "40%"]}>
-                    Desenvolvimento de sistemas, sites e apps.
-                  </Text>
-                  <HStack flexDir="row" spacing={1} marginTop={"10px"}>
-                    <Image src="/images/logo_node.svg" alt="Node" />
-                    <Image src="/images/logo_angular.svg" alt="Angular" />
-                    <Image src="/images/logo_react.svg" alt="React" />
-                  </HStack>
-                </Flex>
-              </Box>
-
               <Link
                 href="/downloads/Giordano_Bruno_Curriculo.pdf"
                 target="_blank"
@@ -142,7 +151,37 @@ export default function ExperienceSection() {
 
               <Box borderLeft={"4px solid"} borderColor={"purple.500"}>
                 <Text fontSize={"1rem"} marginLeft={"10px"}>
-                  10/2021 - Present
+                  Jun 2022 - Present
+                </Text>
+              </Box>
+
+              <Box paddingX={"10px"} paddingY={"15px"} bgColor={"grey.700"}>
+                <Flex
+                  flexDir={["column", "column", "row"]}
+                  justifyContent={"space-between"}
+                >
+                  <Heading fontSize={"1.2rem"}>
+                    ShelterBuddy International Inc.
+                  </Heading>
+                  <Text>Front End Developer</Text>
+                </Flex>
+                <Flex
+                  marginTop={"1rem"}
+                  flexDir={["column", "column", "row"]}
+                  justifyContent={"space-between"}
+                >
+                  <Text maxWidth={["100%", "100%", "40%"]}>
+                    Developing interfaces for the project.
+                  </Text>
+                  <HStack flexDir="row" spacing={1} marginTop={"10px"}>
+                    <Image src="/images/logo_react.svg" alt="React" />
+                  </HStack>
+                </Flex>
+              </Box>
+
+              <Box borderLeft={"4px solid"} borderColor={"purple.500"}>
+                <Text fontSize={"1rem"} marginLeft={"10px"}>
+                  Oct 2021 - Apr 2022
                 </Text>
               </Box>
 
@@ -165,35 +204,6 @@ export default function ExperienceSection() {
                   <Box justifyContent="center" marginTop={"10px"}>
                     <Image src="/images/logo_node.svg" alt="Node" />
                   </Box>
-                </Flex>
-              </Box>
-              <Box borderLeft={"4px solid"} borderColor={"purple.500"}>
-                <Text fontSize={"1rem"} marginLeft={"10px"}>
-                  Feb 2020 - Mar 2021
-                </Text>
-              </Box>
-
-              <Box paddingX={"10px"} paddingY={"15px"} bgColor={"grey.700"}>
-                <Flex
-                  flexDir={["column", "column", "row"]}
-                  justifyContent={"space-between"}
-                >
-                  <Heading fontSize={"1.2rem"}>Devplus Desenvolvimento</Heading>
-                  <Text>Fullstack Developer</Text>
-                </Flex>
-                <Flex
-                  marginTop={"1rem"}
-                  flexDir={["column", "column", "row"]}
-                  justifyContent={"space-between"}
-                >
-                  <Text maxWidth={["100%", "100%", "40%"]}>
-                    Built websites and mobile applications.
-                  </Text>
-                  <HStack flexDir="row" spacing={1} marginTop={"10px"}>
-                    <Image src="/images/logo_node.svg" alt="Node" />
-                    <Image src="/images/logo_angular.svg" alt="Angular" />
-                    <Image src="/images/logo_react.svg" alt="React" />
-                  </HStack>
                 </Flex>
               </Box>
 
