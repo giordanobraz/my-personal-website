@@ -2,6 +2,13 @@ import { Box, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import ReactCountryFlag from "react-country-flag";
 import { useLocale } from "../../hooks/useLocale";
 
+const messages = {
+  GREETING_MESSAGE_BR: "Oi, eu sou o Giordano!",
+  GREETING_MESSAGE_EN: "Hi, I'm Giordano!",
+  JOB_POSITION_MESSAGE_BR: "Desenvolvedor Frontend do Brasil",
+  JOB_POSITION_MESSAGE_EN: "Frontend Developer From Brazil"
+};
+
 export default function IntroductionSection() {
   const locale = useLocale();
 
@@ -35,46 +42,27 @@ export default function IntroductionSection() {
               spacing={5}
               textAlign={["center", "justify"]}
             >
-              {locale === "pt-BR" ? (
-                <>
-                  <Heading fontSize={["36px", "72px"]}>
-                    Oi, eu sou o <br /> Giordano!
-                  </Heading>
-                  <Text fontSize={["18px", "24px"]}>
-                    Desenvolvedor Fullstack no Brasil{" "}
-                    <ReactCountryFlag
-                      countryCode="BR"
-                      svg
-                      aria-label="Brazil"
-                      title="Brazil"
-                      style={{
-                        width: "1.5em",
-                        height: "0.8em",
-                      }}
-                    />
-                  </Text>
-                </>
-              ) : (
-                <>
-                  <Heading fontSize={["36px", "72px"]}>
-                    Hi, I&apos;m <br />
-                    Giordano!
-                  </Heading>
-                  <Text fontSize={["18px", "24px"]}>
-                    Fullstack Developer From Brazil{" "}
-                    <ReactCountryFlag
-                      countryCode="BR"
-                      svg
-                      aria-label="Brazil"
-                      title="Brazil"
-                      style={{
-                        width: "1.5em",
-                        height: "0.8em",
-                      }}
-                    />
-                  </Text>
-                </>
-              )}
+              <Heading fontSize={["36px", "42px"]}>
+                {
+                  locale === "pt-BR" ? messages.GREETING_MESSAGE_BR : messages.GREETING_MESSAGE_EN
+                }
+              </Heading>
+              <Text fontSize={["18px", "20px"]}>
+                {
+                  locale === "pt-BR" ? messages.JOB_POSITION_MESSAGE_BR : messages.JOB_POSITION_MESSAGE_EN
+                }
+                {" "}
+                <ReactCountryFlag
+                  countryCode="BR"
+                  svg
+                  aria-label="Brazil"
+                  title="Brazil"
+                  style={{
+                    width: "1.5em",
+                    height: "0.8em",
+                  }}
+                  />
+              </Text>
             </Stack>
           </Box>
         </Flex>
