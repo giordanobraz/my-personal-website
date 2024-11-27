@@ -8,12 +8,10 @@ import ScrollToTop from "../components/shared/scrollToTopButton";
 import { LocaleProvider } from "../hooks/useLocale";
 import "../styles/globals.scss";
 import { theme } from "../styles/theme";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <>
-      <SpeedInsights />
       <SiteScripts />
       <ChakraProvider theme={theme}>
         <CSSReset />
