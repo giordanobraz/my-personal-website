@@ -72,7 +72,7 @@ export default function ExperienceSection() {
 
               <Box borderLeft={"4px solid"} borderColor={"purple.500"}>
                 <Text fontSize={"1rem"} marginLeft={"10px"}>
-                  Jun 2022 - Atualmente
+                  Jun 2022 - Jul 2024
                 </Text>
               </Box>
 
@@ -151,7 +151,7 @@ export default function ExperienceSection() {
 
               <Box borderLeft={"4px solid"} borderColor={"purple.500"}>
                 <Text fontSize={"1rem"} marginLeft={"10px"}>
-                  Jun 2022 - Present
+                  Jun 2022 - Jul 2024
                 </Text>
               </Box>
 
